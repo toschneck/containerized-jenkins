@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.git.GitSCM_-DescriptorImpl plugin="git@3.0.0">
+  <generation>40</generation>
+  <globalConfigName>labs-build</globalConfigName>
+  <globalConfigEmail>labs-build@consol.de</globalConfigEmail>
+  <createAccountBasedOnEmail>false</createAccountBasedOnEmail>
+</hudson.plugins.git.GitSCM_-DescriptorImpl>

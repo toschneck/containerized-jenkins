@@ -1,0 +1,35 @@
+version: "2"
+
+services:
+  jenkinsmaster:
+    image: jenkins:2.7.4
+    ports:
+      - 80:8080
+    volumes:
+      # mount the jenkins_configuraton folder
+      - ./jenkins_conf:/var/jenkins_home
+      # mount the host system time to the container
+      - /etc/localtime:/etc/localtime:ro
+    links:
+      - jenkinsslave
+    environment:
+      # set correct timezone
+      - TZ=Europe/Berlin
+
+  ### use e.g.`docker-compose scale jenkinsslave=4`
+  jenkinsslave:
+    build: jenkins_slave
+    environment:
+        # set correct timezone
+      - TZ=Europe/Berlin
+        # TODO: change this password there and http://localhost/user/node/configure
+      - JENKINS_JNLP_PW=node
+      - JENKINS_SLAVE_ADD_ARG=-executors 1
+    volumes:
+      - maven-data:/home/jenkins/.m2
+      # mount the host system time to the container
+      - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  maven-data:
+    driver: local

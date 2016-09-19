@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.publish__over__ftp.BapFtpPublisherPlugin_-Descriptor plugin="publish-over-ftp@1.12">
+  <hostConfigurations/>
+  <defaults class="jenkins.plugins.publish_over_ftp.options.FtpPluginDefaults"/>
+</jenkins.plugins.publish__over__ftp.BapFtpPublisherPlugin_-Descriptor>
