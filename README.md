@@ -1,8 +1,12 @@
 # Notes for build up docker-based Jenkins environment
 
+![scalable containerized jenkins](./containerized_jenkins.png)
+
 ## Build / Start / Shutdown
 
 ### automatic environment deployment
+
+    ./update_envrionment.sh 
 
 The automatic environment deploy script will do the following steps:
 1) adds all modified files to git and commits it
