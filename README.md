@@ -31,13 +31,6 @@ e.g. scale our amount on slave to `4`:
     
     docker-compose down
 
-
-# Clean up temporary data
-
-__(optional)__ remove all _temporary data_ as logs and so on
-
-    ./rm_temp_conf_files.sh 
-    
 # Server / Nodes
   
 * Jenkins Build Server:  [localhost](http://localhost)
@@ -47,6 +40,20 @@ __(optional)__ remove all _temporary data_ as logs and so on
 Use as template the following github repo:
   
     git clone git@github.com:toschneck/containerized-jenkins.git
+    
+# Docker Images
+You will find the ready to use image for the Jenkins slave on Docerhub:
+
+* **[toschneck/jenkins-slave-jnlp](https://hub.docker.com/r/toschneck/jenkins-slave-jnlp/)**
+    
+    
+# Clean up temporary data
+
+__(optional)__ remove all _temporary data_ as logs and so on
+
+    ./rm_temp_conf_files.sh 
+    
+
     
 ## FOR PRODUCTION
 __ATTENTION: make sure to change the default node password  keys under:__
